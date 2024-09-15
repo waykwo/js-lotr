@@ -6,9 +6,13 @@ console.log("Tasks linked.");
 // To make middle earth, write a function called makeMiddleEarth that returns the string "Hello Middle Earth!".
 
 // WRITE YOUR CODE HERE
+function makeMiddleEarth() {
+  // console.log("Hello");
+  return "Hello Middle Earth!";
+}
 
 // TESTING TASK 1
-// testMakeMiddleEarth();
+testMakeMiddleEarth();
 
 // Task 2: Put hobbits on the map
 // To add the hobbits to The Shire, write a function called takeAttendance that returns the length of the 'hobbits' array.
@@ -16,17 +20,24 @@ console.log("Tasks linked.");
 var hobbits = ["Frodo Baggins", "Samwise 'Sam' Gamgee", "Meriadoc 'Merry' Brandybuck", "Peregrin 'Pippin' Took"];
 
 // WRITE YOUR CODE HERE
+function takeAttendance() {
+  // console.log(hobbits.length);
+  return hobbits.length;
+}
 
 // TESTING TASK 2
-// testTakeAttendance();
+testTakeAttendance();
 
 // Task 3: Give Frodo the ring
 // To give Frodo the ring, write a function called keepSecret that takes in a string parameter and returns that string in all lower case. Hint: look up a JavaScript string method for this.
 
 // WRITE YOUR CODE HERE
+function keepSecret(string) {
+  return string.toLowerCase();
+}
 
 // TESTING TASK 3
-// testKeepSecret();
+testKeepSecret();
 
 // try clicking on the ring to hear something earsplitting!
 
@@ -37,9 +48,12 @@ var hobbits = ["Frodo Baggins", "Samwise 'Sam' Gamgee", "Meriadoc 'Merry' Brandy
 var partySize = 4;
 
 // WRITE YOUR CODE HERE
+function doubleParty() {
+  return partySize += 4;
+}
 
 // TESTING TASK 4
-// testDoubleParty();
+testDoubleParty();
 
 // click on Strider to see a transformation!
 
@@ -50,18 +64,26 @@ function travelAbroad() {
   var shire = ["Frodo Baggins", "Samwise Gamgee", "Merry Brandybuck", "Pippin Took"];
   var rivendell = [];
   // WRITE YOUR CODE HERE
-}
+  shire.forEach((hobbit) => {
+    rivendell.push(hobbit);
+  });
+  // console.log(rivendell);
+  return rivendell;
+};
 
 // TESTING TASK 5
-// testTravelAbroad();
+testTravelAbroad();
 
 // Task 6: Forge the fellowship
 // To forge the fellowship, write a function called declareAllegiance that takes in a member (a string, such as 'Sam') and concatenates it into a string to return "I, Sam, am part of the fellowship!"
 
 // WRITE YOUR CODE HERE
+function declareAllegiance(member) {
+  return `I, ${member}, am part of the fellowship!`;
+}
 
 // TESTING TASK 6
-// testDeclareAllegiance();
+testDeclareAllegiance();
 
 // click on Rivendell to hear a tune!
 
@@ -72,10 +94,12 @@ function travelAbroad() {
 
 function slayTheBalrog() {
   // WRITE YOUR CODE HERE
+  let gandalf = "Gandalf";
+  return `${gandalf} the Grey says: You shall not pass! ${gandalf} the Grey is now ${gandalf} the white.`
 }
 
 // TESTING TASK 7
-// testSlayTheBalrog();
+testSlayTheBalrog();
 
 // Task 8: Blow the Horn of Gondor
 // Observe the function with the Boromir object below. Have the function return the value of calling the blowHorn function on boromir. Docs: https://www.w3schools.com/js/js_object_methods.asp
@@ -90,13 +114,21 @@ function blowTheHornOfGondor() {
     },
   };
   // WRITE YOUR CODE HERE
+  return boromir.blownHorn();
 }
 
 // TESTING TASK 8
-// testBlowTheHornOfGondor();
+testBlowTheHornOfGondor();
 
 // Task 9: Send Frodo and Sam to Mount Doom
-// To send Frodo and Sam to Mount Doom, find Frodo's place in the fellowshipMembers array in the function below using the indexOf method: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf. Save that value to a variable called frodosPlace. Then, use the .splice method to remove and return 2 elements from the fellowshipMembers array (Frodo and Sam) starting at frodosPlace: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice. The splice method has a return value, you can use that as your function return!
+// To send Frodo and Sam to Mount Doom, find Frodo's place in the 
+// fellowshipMembers array in the function below using the indexOf 
+// method: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf. 
+// Save that value to a variable called frodosPlace. Then, use the 
+// .splice method to remove and return 2 elements from the 
+// fellowshipMembers array (Frodo and Sam) starting at frodosPlace: 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice. 
+// The splice method has a return value, you can use that as your function return!
 
 function itsDangerousToGoAlone() {
   var fellowshipMembers = [
@@ -110,10 +142,13 @@ function itsDangerousToGoAlone() {
     "Pippin Took",
   ];
   // WRITE YOUR CODE HERE
+  // console.log(fellowshipMembers.indexOf("Frodo Baggins"));
+  let frodosPlace = fellowshipMembers.indexOf("Frodo Baggins");
+  fellowshipMembers.splice(frodosPlace, )
 }
 
 // TESTING TASK 9
-// testItsDangerousToGoAlone();
+testItsDangerousToGoAlone();
 
 // Task 10: Gollum takes the ring
 // To have Gollum take the ring, take a look at the code below and uncomment the noted lines to look at the console output. Then, read up on function scope and global scope here (you just need those 2): https://www.w3schools.com/js/js_scope.asp. Finally, fix the weWantsIt function to use the correct variable scope for the gollumHasRing variable so the global value changes to true.
